@@ -14,10 +14,9 @@ dataArr.forEach((row) => {
   let rowArr = row.split(",");
   let rowDict = {};
 
-  rowDict[header[0]] = rowArr[0];
-  rowDict[header[1]] = rowArr[1];
-  rowDict[header[2]] = rowArr[2];
-  rowDict[header[3]] = rowArr[3];
+  header.forEach((head, index) => {
+    rowDict[head] = rowArr[index];
+  });
 
   storage.push(rowDict);
 });
