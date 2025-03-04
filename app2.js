@@ -9,7 +9,12 @@ let storageArr = [];
 
 dataArr.forEach((row) => {
   let rowString = row.split(",");
-  let rowArr = [rowString[0], rowString[1], rowString[2], rowString[3]];
+  // let rowArr = [rowString[0], rowString[1], rowString[2], rowString[3]];
+  let rowArr = [];
+  for (let i = 0; i < rowString.length; i++) {
+    rowArr.push(rowString[i]);
+  }
+
   storageArr.push(rowArr);
 });
 
